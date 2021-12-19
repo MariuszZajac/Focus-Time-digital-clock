@@ -14,3 +14,6 @@ C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.cspro
 C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.csproj.CoreCompileInputs.cache
 C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.exe
 C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.pdb
+C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\bin\Debug\System.Windows.Forms.dll
+C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\bin\Debug\pl\System.Windows.Forms.resources.dll
+C:\Users\Ed\RiderProjects\DigitalClock\DigitalClock\obj\Debug\DigitalClock.csproj.CopyComplete
