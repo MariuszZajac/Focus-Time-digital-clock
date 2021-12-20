@@ -21,7 +21,6 @@ namespace DigitalClock
         {
             InitializeComponent();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer = new DispatcherTimer();
@@ -29,54 +28,36 @@ namespace DigitalClock
             timer.Tick += Timer_tick;
             timer.Start();
         }
-    
+        
         private void Focus_30_OnClick(object sender, EventArgs e)
-        {  
-            //TODO
-            // DateTime start = DateTime.Now;           
-            // Thread.Sleep(1000);
-            // DateTime end = DateTime.Now;
-            // TimeSpan timeDiff = end - start;
-            //
-            // DispatcherTimer timer1 = new DispatcherTimer();
-            // timer1.Interval = TimeSpan.FromSeconds(1);
-            // timer1.Tick += Timer_tick2;
-            // timer1.Start();
-            
-           //  Stopwatch stopwatch = new Stopwatch();
-           //  stopwatch.Start();
-           //
-           //  // ... This takes 10 seconds to finish.
-           //  for (int i = 0; i < 100; i++)
-           //  {
-           //     Thread.Sleep(1000);
-           //  }
-           //
-           //  // Stop.
-           //  stopwatch.Stop();
-           //
-           //  // Write hours, minutes and seconds.
-           // CountLabel.Content = stopwatch.Elapsed;
+        {
+            TimeSpan ts = TimeSpan.FromMinutes(30);
+            DispatcherTimer timer2 = new DispatcherTimer();
+            timer2.Interval = TimeSpan.FromSeconds(1);
+            timer2.Tick += Timer_tick2;
+            timer2.Start();
+
+            void Timer_tick2(object sender, EventArgs e)
+            {
+                ts = ts.Subtract(TimeSpan.FromSeconds(1));
+                Timer1.Content = ts.ToString(@"mm\:ss");
+            }
         }
 
         private void QuitButton_click1(object sender, RoutedEventArgs e)
         {
             Environment.Exit(1);
         }
+        public void Timer_tick3(object sender, EventArgs e)
+        {
+            TimeSpan ts = TimeSpan.FromMinutes(5);
+            ts = ts.Subtract(TimeSpan.FromSeconds(1));
+            Timer1.Content = ts.ToString(@"mm\:ss");
+        }
         public void Timer_tick(object sender, EventArgs e)
         {
             TimeLabel.Content = Now.ToLongTimeString();
             DateLabel.Content = Now.ToLongDateString();
-        }
-
-        private void Break_5_OnClick(object sender, RoutedEventArgs e)
-        {
-            //TODO
-        }
-
-        private void Break_15_OnClick(object sender, RoutedEventArgs e)
-        {
-             //TODO
         }
     }
 }
